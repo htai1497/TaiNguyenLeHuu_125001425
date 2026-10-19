@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <defs>
+    <linearGradient id="badgeGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#f5df88"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="156" height="46" rx="23" fill="#181824" stroke="url(#badgeGold)" stroke-width="1.5"/>
+  <circle cx="25" cy="25" r="10" fill="#d4af37"/>
+  <polygon points="22,20 31,25 22,30" fill="#0b0b10"/>
+  <text x="44" y="29" font-family="'Inter', sans-serif" font-size="12" font-weight="700" letter-spacing="1" fill="#ffffff">IMAX LASER</text>
+  <text x="44" y="40" font-family="'Inter', sans-serif" font-size="8" font-weight="500" fill="#a7a5b3">DOLBY ATMOS</text>
+</svg>

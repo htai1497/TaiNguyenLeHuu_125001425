@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>LUMIÈRE Cinema | Rạp Chiếu Phim Cao Cấp Đa Thể Loại</title>
+  <meta name="description"
+    content="LUMIÈRE Cinema - Điểm đến của điện ảnh đa thể loại: Hành động, Viễn tưởng, Tâm lý, Kinh dị, Hoạt hình, Lãng mạn.">
+  <meta name="author" content="Nguyễn Lê Hữu Tài - MSSV: 125001425">
+
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Thư viện Animate.css (Yêu cầu kỹ thuật 3) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- Thư viện AOS - Animate On Scroll (Yêu cầu kỹ thuật 3) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- CSS Tùy biến chính -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 1. SEMANTIC HTML5: <header> VÀ <nav> (Menu Mobile thuần CSS bằng Checkbox Hack) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" aria-label="LUMIÈRE Cinema - Trở về đầu trang">
+        <span class="logo-mark">L</span>
+        <span class="logo-text">LUMIÈRE</span>
+      </a>
+
+      <!-- Checkbox ẩn & Label đóng mở menu mobile (Không cần JS) -->
+      <input type="checkbox" id="navToggleCheck" class="nav-toggle-check" aria-hidden="true">
+      <label for="navToggleCheck" class="nav-toggle-label" aria-label="Đóng mở menu điều hướng">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+        <ul>
+          <li><a href="#hero">Trang Chủ</a></li>
+          <li><a href="#now-showing">Đang Chiếu</a></li>
+          <li><a href="#genres">Thể Loại</a></li>
+          <li><a href="#featured">Phim Nổi Bật</a></li>
+          <li><a href="#membership">Hội Viên</a></li>
+          <li><a href="#contact">Liên Hệ</a></li>
+        </ul>
+      </nav>
+
+      <a href="#now-showing" class="btn btn-gold btn-sm header-cta">Đặt Vé Ngay</a>
+    </div>
+  </header>
+
+  <!-- 2. SEMANTIC HTML5: <main> -->
+  <main id="mainContent">
+
+    <!-- HERO SECTION (Áp dụng Animate.css) -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow animate__animated animate__fadeInDown">
+          MÙA PHIM 2026 • TRẢI NGHIỆM ĐIỆN ẢNH ĐỈNH CAO
+        </p>
+        <h1 id="hero-title" class="animate__animated animate__fadeInDown animate__delay-1s">
+          Nơi Cảm Xúc Thăng Hoa <span>Trong Từng Khung Hình</span>
+        </h1>
+        <p class="hero-desc animate__animated animate__fadeIn animate__delay-1s">
+          Hệ thống rạp chiếu chuẩn quốc tế với phòng chiếu IMAX Laser, âm thanh vòm Dolby Atmos và danh mục phim đa thể
+          loại được tuyển chọn khắt khe nhất thế giới.
+        </p>
+        <div class="hero-actions animate__animated animate__fadeInUp animate__delay-2s">
+          <a href="#now-showing" class="btn btn-gold">Khám Phá Phim Đang Chiếu</a>
+          <a href="#membership" class="btn btn-outline">Đặc Quyền Hội Viên</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHIM ĐANG CHIẾU (8 thẻ <article class="card movie"> có Poster CSS Gradient) -->
+    <section class="section" id="now-showing" aria-labelledby="now-title">
+      <div class="container">
+        <header class="section-head" data-aos="fade-up">
+          <p class="eyebrow">Lịch Chiếu Hôm Nay</p>
+          <h2 id="now-title">Phim Đang Khởi Chiếu</h2>
+          <p>Trải nghiệm đa dạng thể loại từ hành động nghẹt thở, viễn tưởng không gian đến những thước phim tình cảm
+            lắng đọng.</p>
+        </header>
+
+        <div class="filters-bar" data-aos="fade-up" data-aos-delay="100">
+          <span class="filter-badge active">Tất Cả Thể Loại</span>
+          <span class="filter-badge">Hành Động</span>
+          <span class="filter-badge">Viễn Tưởng</span>
+          <span class="filter-badge">Tâm Lý</span>
+          <span class="filter-badge">Kinh Dị</span>
+          <span class="filter-badge">Hoạt Hình</span>
+          <span class="filter-badge">Lãng Mạn</span>
+        </div>
+
+        <div class="movie-grid" id="movieGrid">
+          <!-- Phim 1: Hành động -->
+          <article class="card movie" data-aos="zoom-in" data-aos-delay="50">
+            <figure class="poster poster-action">
+              <img class="poster-img" src="assets/images/poster-action.jpg" alt="Poster phim Đường Đua Cuối Cùng"
+                loading="lazy">
+              <span class="badge">Hành Động</span>
+              <figcaption>
+                <h3>Đường Đua Cuối Cùng</h3>
+                <p class="meta">118 phút • T16 • 2D / 4DX</p>
+              </figcaption>
+            </figure>
+            <div class="card-body">
+              <div>
+                <span class="genre-tag">Hành Động • Giật Gân</span>
+                <div class="rating">★ 8.8/10</div>
+              </div>
+              <a href="#contact" class="btn btn-gold btn-sm">Đặt Vé</a>
+            </div>
+          </article>
+
+          <!-- Phim 2: Viễn tưởng (Phim tiêu điểm) -->
+          <article class="card movie" data-aos="zoom-in" data-aos-delay="100">
+            <figure class="poster poster-scifi">
+              <img class="poster-img" src="assets/images/poster-scifi.jpg" alt="Poster phim Tinh Vân Thứ Bảy"
+                loading="lazy">
+              <span class="badge">IMAX Laser</span>
+              <figcaption>
+                <h3>Tinh Vân Thứ Bảy</h3>
+                <p class="meta">142 phút • T13 • IMAX / Atmos</p>
+              </figcaption>
+            </figure>
+            <div class="card-body">
+              <div>
+                <span class="genre-tag">Viễn Tưởng • Khám Phá</span>
+                <div class="rating">★ 9.4/10</div>
+              </div>
+              <a href="#contact" class="btn btn-gold btn-sm">Đặt Vé</a>
+            </div>
+          </article>
+
+          <!-- Phim 3: Tâm lý chiều sâu -->
+          <article class="card movie" data-aos="zoom-in" data-aos-delay="150">
+            <figure class="poster poster-drama">
+              <img class="poster-img" src="assets/images/poster-drama.jpg" alt="Poster phim Căn Phòng Số 9"
+                loading="lazy">
+              <span class="badge">Tâm Lý</span>
+              <figcaption>
+                <h3>Căn Phòng Số 9</h3>
+                <p class="meta">105 phút • T18 • Phim Nghệ Thuật</p>
+              </figcaption>
+            </figure>
+            <div class="card-body">
+              <div>
+                <span class="genre-tag">Tâm Lý • Kịch Tính</span>
+                <div class="rating">★ 8.6/10</div>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-sm">Đặt Vé</a>
+            </div>
+          </article>
+
+          <!-- Phim 4: Kinh dị hồi hộp -->
+          <article class="card movie" data-aos="zoom-in" data-aos-delay="200">
+            <figure class="poster poster-horror">
+              <img class="poster-img" src="assets/images/poster-horror.jpg" alt="Poster phim Tiếng Vọng Từ Giếng"
+                loading="lazy">
+              <span class="badge">Kinh Dị</span>
+              <figcaption>
+                <h3>Tiếng Vọng Từ Giếng</h3>
+                <p class="meta">96 phút • T18 • Âm Thanh Vòm</p>
+              </figcaption>
+            </figure>
+            <div class="card-body">
+              <div>
+                <span class="genre-tag">Kinh Dị • Bí Ẩn</span>
+                <div class="rating">★ 8.2/10</div>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-sm">Đặt Vé</a>
+            </div>
+          </article>
+
+          <!-- Phim 5: Hoạt hình gia đình -->
+          <article class="card movie" data-aos="zoom-in" data-aos-delay="250">
+            <figure class="poster poster-animation">
+              <img class="poster-img" src="assets/images/poster-animation.jpg" alt="Poster phim Cáo Nhỏ & Rừng Ánh Sáng"
+                loading="lazy">
+              <span class="badge">Hoạt Hình</span>
+              <figcaption>
+                <h3>Cáo Nhỏ &amp; Rừng Ánh Sáng</h3>
+                <p class="meta">88 phút • P • Lồng Tiếng Việt</p>
+              </figcaption>
+            </figure>
+            <div class="card-body">
+              <div>
+                <span class="genre-tag">Hoạt Hình • Phiêu Lưu</span>
+                <div class="rating">★ 9.0/10</div>
+              </div>
+              <a href="#contact" class="btn btn-gold btn-sm">Đặt Vé</a>
+            </div>
+          </article>
+
+          <!-- Phim 6: Lãng mạn nhẹ nhàng -->
+          <article class="card movie" data-aos="zoom-in" data-aos-delay="300">
+            <figure class="poster poster-romance">
+              <img class="poster-img" src="assets/images/poster-romance.jpg" alt="Poster phim Mùa Thu Ở Hội An"
+                loading="lazy">
+              <span class="badge">Lãng Mạn</span>
+              <figcaption>
+                <h3>Mùa Thu Ở Hội An</h3>
+                <p class="meta">110 phút • T13 • Điện Ảnh Việt</p>
+              </figcaption>
+            </figure>
+            <div class="card-body">
+              <div>
+                <span class="genre-tag">Lãng Mạn • Tình Cảm</span>
+                <div class="rating">★ 8.9/10</div>
+              </div>
+              <a href="#contact" class="btn btn-gold btn-sm">Đặt Vé</a>
+            </div>
+          </article>
+
+          <!-- Phim 7: Sci-fi Neon -->
+          <article class="card movie" data-aos="zoom-in" data-aos-delay="350">
+            <figure class="poster poster-neon">
+              <img class="poster-img" src="assets/images/poster-cyberpunk.jpg" alt="Poster phim Chiến Binh Không Gian"
+                loading="lazy">
+              <span class="badge">Cyberpunk</span>
+              <figcaption>
+                <h3>Chiến Binh Không Gian</h3>
+                <p class="meta">130 phút • T16 • 3D Laser</p>
+              </figcaption>
+            </figure>
+            <div class="card-body">
+              <div>
+                <span class="genre-tag">Hành Động • Viễn Tưởng</span>
+                <div class="rating">★ 9.1/10</div>
+              </div>
+              <a href="#contact" class="btn btn-gold btn-sm">Đặt Vé</a>
+            </div>
+          </article>
+
+          <!-- Phim 8: Hoài niệm cổ điển -->
+          <article class="card movie" data-aos="zoom-in" data-aos-delay="400">
+            <figure class="poster poster-sepia">
+              <img class="poster-img" src="assets/images/poster-vintage.jpg" alt="Poster phim Ký Ức Hoàng Hôn"
+                loading="lazy">
+              <span class="badge">Kinh Điển</span>
+              <figcaption>
+                <h3>Ký Ức Hoàng Hôn</h3>
+                <p class="meta">115 phút • T16 • Bản Chiếu Mới</p>
+              </figcaption>
+            </figure>
+            <div class="card-body">
+              <div>
+                <span class="genre-tag">Tâm Lý • Hoài Niệm</span>
+                <div class="rating">★ 8.7/10</div>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-sm">Đặt Vé</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- THỂ LOẠI (6 thẻ <article class="genre-card">) -->
+    <section class="section section-alt" id="genres" aria-labelledby="genres-title">
+      <div class="container">
+        <header class="section-head" data-aos="fade-up">
+          <p class="eyebrow">Vũ Trụ Điện Ảnh</p>
+          <h2 id="genres-title">Sáu Thế Giới Điện Ảnh Đa Dạng</h2>
+          <p>Mỗi thể loại là một hành trình cảm xúc riêng biệt được thiết kế với tiêu chuẩn âm thanh và ánh sáng tương
+            thích cao nhất.</p>
+        </header>
+
+        <div class="genre-grid">
+          <article class="genre-card" data-aos="flip-left" data-aos-delay="50">
+            <span class="genre-icon" aria-hidden="true">⚡</span>
+            <h3>Hành Động</h3>
+            <p>Nhịp tim tăng tốc theo từng pha rượt đuổi nghẹt thở và những màn đấu trí kịch tính đỉnh cao trên màn bạc
+              lớn.</p>
+          </article>
+          <article class="genre-card" data-aos="flip-left" data-aos-delay="100">
+            <span class="genre-icon" aria-hidden="true">🪐</span>
+            <h3>Viễn Tưởng</h3>
+            <p>Mở ra những chân trời mới ngoài không gian, công nghệ tương lai và những câu hỏi lớn về số phận của nhân
+              loại.</p>
+          </article>
+          <article class="genre-card" data-aos="flip-left" data-aos-delay="150">
+            <span class="genre-icon" aria-hidden="true">🎭</span>
+            <h3>Tâm Lý Xã Hội</h3>
+            <p>Những lát cắt sâu sắc về đời sống nội tâm con người, giàu tính nhân văn và được vinh danh tại các liên
+              hoan phim quốc tế.</p>
+          </article>
+          <article class="genre-card" data-aos="flip-left" data-aos-delay="200">
+            <span class="genre-icon" aria-hidden="true">👁️</span>
+            <h3>Kinh Dị &amp; Bí Ẩn</h3>
+            <p>Bóng tối, sự tĩnh lặng và nỗi sợ được dàn dựng đầy tính nghệ thuật với hệ thống âm thanh Dolby Atmos đa
+              chiều.</p>
+          </article>
+          <article class="genre-card" data-aos="flip-left" data-aos-delay="250">
+            <span class="genre-icon" aria-hidden="true">🎨</span>
+            <h3>Hoạt Hình Gia Đình</h3>
+            <p>Sắc màu rực rỡ, thông điệp giáo dục tích cực và tiếng cười trọn vẹn dành cho cả gia đình, từ trẻ nhỏ đến
+              người lớn.</p>
+          </article>
+          <article class="genre-card" data-aos="flip-left" data-aos-delay="300">
+            <span class="genre-icon" aria-hidden="true">🌹</span>
+            <h3>Lãng Mạn Lắng Đọng</h3>
+            <p>Tình yêu ở mọi cung bậc cảm xúc, nhẹ nhàng, sâu lắng và đánh thức những kỷ niệm đẹp đẽ nhất trong trái
+              tim khán giả.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHIM NỔI BẬT (<figure>, <article>, <dl>, <dt>, <dd>) -->
+    <section class="section" id="featured" aria-labelledby="featured-title">
+      <div class="container featured-inner">
+        <div class="featured-poster" data-aos="fade-right">
+          <figure class="poster poster-scifi poster-large">
+            <img class="poster-img" src="assets/images/poster-scifi.jpg" alt="Phim Tinh Vân Thứ Bảy IMAX Laser"
+              loading="lazy">
+            <span class="badge">Phim Của Tháng</span>
+            <figcaption>
+              <h3>Tinh Vân Thứ Bảy</h3>
+              <p class="meta">142 phút • Khởi chiếu toàn quốc • IMAX Laser</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <article class="featured-text" data-aos="fade-left">
+          <p class="eyebrow">Tác Phẩm Tiêu Điểm</p>
+          <h2 id="featured-title">Tinh Vân Thứ Bảy (Seventh Nebula)</h2>
+          <p>
+            Kiệt tác điện ảnh viễn tưởng kết hợp phần nhìn choáng ngợp với câu chuyện xúc động về sự cô đơn và tình bạn
+            giữa vũ trụ bao la. Phim được ghi hình toàn bộ bằng máy quay kỹ thuật số chuyên dụng của định dạng IMAX và
+            hòa âm vòm đa tầng.
+          </p>
+          <dl class="spec-list">
+            <div>
+              <dt>Đạo Diễn</dt>
+              <dd>Lâm Quang Vũ</dd>
+            </div>
+            <div>
+              <dt>Thời Lượng</dt>
+              <dd>142 phút</dd>
+            </div>
+            <div>
+              <dt>Định Dạng Chiếu</dt>
+              <dd>2D • 3D • IMAX Laser</dd>
+            </div>
+            <div>
+              <dt>Công Nghệ Âm Thanh</dt>
+              <dd>Dolby Atmos 128 Kênh</dd>
+            </div>
+          </dl>
+          <a href="#contact" class="btn btn-gold">Đặt Vé Suất Chiếu Sớm</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- GÓI HỘI VIÊN (3 thẻ <article class="plan">) -->
+    <section class="section section-alt" id="membership" aria-labelledby="member-title">
+      <div class="container">
+        <header class="section-head" data-aos="fade-up">
+          <p class="eyebrow">Đặc Quyền Khách Hàng</p>
+          <h2 id="member-title">Chọn Hạng Thẻ Hội Viên LUMIÈRE</h2>
+          <p>Đăng ký thành viên để tận hưởng hàng loạt ưu đãi vé xem phim, suất chiếu sớm độc quyền và dịch vụ ẩm thực
+            cao cấp.</p>
+        </header>
+
+        <div class="plan-grid">
+          <article class="plan" data-aos="fade-up" data-aos-delay="100">
+            <h3>Hạng Silver</h3>
+            <p class="price">Miễn Phí</p>
+            <ul>
+              <li>Tích điểm 5% giá trị mỗi vé</li>
+              <li>Quà tặng bắp nước dịp sinh nhật</li>
+              <li>Nhận bản tin lịch chiếu qua email</li>
+              <li>Giảm 10% các ngày Thứ Ba vui vẻ</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline">Đăng Ký Silver</a>
+          </article>
+
+          <article class="plan plan-featured" data-aos="fade-up" data-aos-delay="200">
+            <span class="badge">Phổ Biến Nhất</span>
+            <h3 style="color: var(--primary-light);">Hạng Gold</h3>
+            <p class="price">199.000đ<small>/tháng</small></p>
+            <ul>
+              <li><strong>2 Vé xem phim miễn phí</strong> hàng tháng</li>
+              <li>Ưu tiên chọn vị trí ghế VIP trung tâm</li>
+              <li>Giảm 20% toàn bộ quầy ẩm thực &amp; bắp nước</li>
+              <li>Vé mời tham dự suất chiếu sớm Premiere</li>
+            </ul>
+            <a href="#contact" class="btn btn-gold">Đăng Ký Gold</a>
+          </article>
+
+          <article class="plan" data-aos="fade-up" data-aos-delay="300">
+            <h3>Hạng Platinum</h3>
+            <p class="price">499.000đ<small>/tháng</small></p>
+            <ul>
+              <li>Xem phim không giới hạn số lượng</li>
+              <li>Quyền sử dụng phòng chờ VIP Lounge</li>
+              <li>Miễn phí 01 phần bắp nước mỗi lần xem</li>
+              <li>Thẻ mời danh dự sự kiện ra mắt phim cùng đạo diễn</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline">Đăng Ký Platinum</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIÊN HỆ ĐẶT VÉ (<form> với :focus effect) -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <div data-aos="fade-right">
+          <p class="eyebrow">Dịch Vụ Khách Hàng</p>
+          <h2 id="contact-title">Đặt Vé &amp; Nhận Lịch Chiếu</h2>
+          <p>Để lại thông tin liên hệ để đội ngũ chăm sóc khách hàng của LUMIÈRE Cinema gửi xác nhận đặt vé, vị trí ghế
+            đẹp và mã giảm giá 20% cho lần ghé thăm đầu tiên.</p>
+        </div>
+
+        <form class="contact-form" data-aos="fade-left" action="#contact" method="get">
+          <label for="fullName">Họ và Tên Quý Khách</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Ví dụ: Nguyễn Văn An" required>
+
+          <label for="userEmail">Địa Chỉ Email</label>
+          <input type="email" id="userEmail" name="userEmail" placeholder="email-cua-ban@example.com" required>
+
+          <label for="movieSelect">Bộ Phim Quan Tâm</label>
+          <select id="movieSelect" name="movieSelect">
+            <option value="Tinh Vân Thứ Bảy">Tinh Vân Thứ Bảy (IMAX Laser)</option>
+            <option value="Đường Đua Cuối Cùng">Đường Đua Cuối Cùng (Hành Động)</option>
+            <option value="Căn Phòng Số 9">Căn Phòng Số 9 (Tâm Lý)</option>
+            <option value="Tiếng Vọng Từ Giếng">Tiếng Vọng Từ Giếng (Kinh Dị)</option>
+            <option value="Cáo Nhỏ & Rừng Ánh Sáng">Cáo Nhỏ &amp; Rừng Ánh Sáng (Hoạt Hình)</option>
+            <option value="Mùa Thu Ở Hội An">Mùa Thu Ở Hội An (Lãng Mạn)</option>
+            <option value="Chiến Binh Không Gian">Chiến Binh Không Gian (Cyberpunk)</option>
+            <option value="Ký Ức Hoàng Hôn">Ký Ức Hoàng Hôn (Kinh Điển)</option>
+          </select>
+
+          <button type="submit" class="btn btn-gold">Xác Nhận Gửi Yêu Cầu</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 3. SEMANTIC HTML5: <footer> với <address> và thông tin sinh viên -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <span class="logo-mark">L</span>
+          <span class="logo-text">LUMIÈRE</span>
+        </a>
+        <p>Hệ thống rạp chiếu phim nghệ thuật cao cấp, nơi tôn vinh những giá trị điện ảnh đích thực và đa dạng thể
+          loại.</p>
+
+        <div class="student-credit-box">
+          <p style="margin: 0; color: #fff;">
+            <strong>Sinh viên thực hiện:</strong> Nguyễn Lê Hữu Tài
+          </p>
+          <p style="margin: 4px 0 0; color: var(--text-muted); font-size: 0.85rem;">
+            MSSV: <strong>125001425</strong> • Môn học: Thiết kế Web
+          </p>
+        </div>
+      </div>
+
+      <address class="footer-contact">
+        <h3>Địa Điểm Rạp</h3>
+        <p>Đồng Nai, Việt Nam</p>
+        <p><a href="mailto:tai125001425@lumiere.vn">tai125001425@lumiere.vn</a></p>
+        <p><a href="tel:+84900000000">Hotline: 1900 8888</a></p>
+        <p style="font-size: 0.82rem; color: var(--text-muted);">Mở cửa: 08:30 - 24:00 hàng ngày</p>
+      </address>
+
+      <nav class="footer-nav" aria-label="Liên kết chân trang">
+        <h3>Khám Phá Nhanh</h3>
+        <ul>
+          <li><a href="#hero">Về Trang Chủ</a></li>
+          <li><a href="#now-showing">Phim Đang Chiếu</a></li>
+          <li><a href="#genres">Khám Phá Thể Loại</a></li>
+          <li><a href="#featured">Phim Trong Tháng</a></li>
+          <li><a href="#membership">Quyền Lợi Hội Viên</a></li>
+          <li><a href="#contact">Đặt Vé Trực Tuyến</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="copyright">
+      &copy; 2026 LUMIÈRE Cinema • Bài thi giữa kỳ học phần Thiết kế Web • Sinh viên: Nguyễn Lê Hữu Tài - MSSV:
+      125001425. Tất cả phim và nhân vật trong trang mang tính chất học thuật minh họa.
+    </p>
+  </footer>
+
+  <!-- KHỞI CHẠY AOS INLINE (HOÀN TOÀN KHÔNG DÙNG FILE JS NGOÀI) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 60
+    });
+  </script>
+
+</body>
+
+</html>
