@@ -17,20 +17,8 @@ Website được xây dựng theo chủ đề **Landing Page rạp chiếu phim 
 
 ---
 
-## II. ĐỐI CHIẾU THANG ĐIỂM CHẤM CHI TIẾT (10.0 ĐIỂM)
 
-| Tiêu chí chấm | Yêu cầu chi tiết của đề thi | Mức độ đáp ứng trong sản phẩm | Điểm đạt |
-| :--- | :--- | :--- | :---: |
-| **1. Quy chuẩn Nộp bài & Git** | • Tên Repo đúng cú pháp `Ten_Ho_MSSV`.<br>• Commit rõ ràng, có link Live Preview hoạt động tốt. | • Tên thư mục & remote: `TaiNguyenLeHuu_125001425`.<br>• Kèm link Live GitHub Pages sẵn sàng truy cập. | **1.0 / 1.0** |
-| **2. Chuẩn Semantic HTML5** | • Cấu trúc web hợp lệ, sử dụng đúng các thẻ ngữ nghĩa: `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`,...<br>• Không lạm dụng thẻ `<div>` vô nghĩa. | • Đầy đủ 100% các thẻ chuẩn W3C.<br>• Phân chia rõ ràng: 8 phim dùng `<article class="card movie">` và `<figure>`, 6 thể loại dùng `<article>`, 3 gói hội viên dùng `<article>`, footer dùng `<address>`. | **2.0 / 2.0** |
-| **3. Kỹ thuật CSS & Variables** | • Khai báo & vận dụng hiệu quả **CSS Variables** cho color/font.<br>• Layout cân đối, sử dụng tốt Flexbox/Grid.<br>• UI/UX thẩm mỹ, có tính hoàn thiện cao. | • `:root` quản lý tập trung màu Gold, Dark surface, Fonts, Spacing, Shadows.<br>• CSS Grid tự động co giãn (`auto-fill`, `minmax`), Flexbox cho Navbar/Buttons.<br>• Giao diện hoàng gia cực kỳ ấn tượng, responsive toàn diện. | **2.5 / 2.5** |
-| **4. Hiệu ứng & Thư viện** | • Tích hợp thành công **Animate.css** và **AOS.css** đúng cách.<br>• Hiệu ứng chuyển động mượt mà, không lạm dụng gây rối mắt.<br>• Tự viết hiệu ứng `:hover`, `:focus` bằng CSS cho nút và cards. | • Animate.css cho Hero Header (`fadeInDown`, `fadeInUp`).<br>• AOS cho các khối section (`fade-up`, `zoom-in`, `flip-left`) cấu hình trễ nhịp nhàng.<br>• Nút bấm có hiệu ứng quét sáng `::before`, card phim nâng cao `translateY(-8px)`, form input sáng viền khi `:focus`. | **1.5 / 1.5** |
-| **5. Nhật ký Prompt Engineering** | • File `PROMPT_LOG.md` trình bày chi tiết các bước hỏi - đáp với AI.<br>• Thể hiện rõ tư duy tinh chỉnh (iteration), biết sửa lỗi AI, chỉ đạo AI theo đúng ý đồ chuẩn. | • File [PROMPT_LOG.md](PROMPT_LOG.md) thể hiện đầy đủ 4 vòng lặp tinh chỉnh, chỉ đạo AI sửa lỗi thẻ `<div>`, cấu hình AOS, và bỏ file JS để tối ưu CSS thuần. | **3.0 / 3.0** |
-| **TỔNG ĐIỂM** | **Toàn bộ 5 tiêu chí của đề thi** | **Đáp ứng trọn vẹn, xuất sắc** | **10.0 / 10.0** |
-
----
-
-## III. CẤU TRÚC THƯ MỤC NỘP BÀI
+## II. CẤU TRÚC THƯ MỤC NỘP BÀI
 ```
 Tai_NguyenLeHuu_125001425/
 ├── index.html       # Mã nguồn chính chuẩn Semantic HTML5 & tiếng Việt UTF-8
@@ -38,11 +26,9 @@ Tai_NguyenLeHuu_125001425/
 ├── README.md        # Báo cáo tổng kết đồ án & đối chiếu barem chấm điểm
 └── PROMPT_LOG.md    # Nhật ký Prompt Engineering theo đúng mẫu chuẩn (3.0 điểm)
 ```
-*(Lưu ý: Dự án hoàn toàn KHÔNG sử dụng file JavaScript bên ngoài theo đúng yêu cầu tối ưu hóa và chống lỗi khi triển khai).*
 
----
 
-## IV. HƯỚNG DẪN KHỞI CHẠY
+## III. HƯỚNG DẪN KHỞI CHẠY
 1. **Xem trực tiếp trên máy tính:** Nhấp đúp chuột vào file `index.html` để mở ngay trên bất kỳ trình duyệt web nào (Google Chrome, Microsoft Edge, Firefox, Safari).
 2. **Xem qua Local Server:**
    ```bash
