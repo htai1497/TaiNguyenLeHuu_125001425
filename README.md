@@ -28,16 +28,3 @@ Tai_NguyenLeHuu_125001425/
 ```
 
 
-## III. HƯỚNG DẪN KHỞI CHẠY
-1. **Xem trực tiếp trên máy tính:** Nhấp đúp chuột vào file `index.html` để mở ngay trên bất kỳ trình duyệt web nào (Google Chrome, Microsoft Edge, Firefox, Safari).
-2. **Xem qua Local Server:**
-   ```bash
-   python -m http.server 8080
-   ```
-   Sau đó mở trình duyệt truy cập: `http://localhost:8080`
-3. **Đẩy bài lên GitHub:**
-   ```bash
-   git add .
-   git commit -m "Hoan thien do an web rap phim Lumiere Cinema theo thang diem 10"
-   git push origin main
-   ```
